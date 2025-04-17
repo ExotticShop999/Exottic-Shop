@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EXOTTIC SHOP - Gorras con Estilo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #111;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    nav button {
+      background-color: #fff;
+      color: #111;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    nav button:hover {
+      background-color: #ddd;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card p {
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .contacto {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contacto a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function mostrarCategoria(cat) {
+      const secciones = document.querySelectorAll('.categoria');
+      secciones.forEach(seccion => {
+        seccion.style.display = 'none';
+      });
+      document.getElementById(cat).style.display = 'grid';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>EXOTTIC SHOP</h1>
+    <p>Tu estilo empieza por la cabeza</p>
+  </header>
+
+  <nav>
+    <button onclick="mostrarCategoria('placa')">Gorras de Placa</button>
+    <button onclick="mostrarCategoria('gamuza')">Gorras de Gamuza</button>
+    <button onclick="mostrarCategoria('nissi')">Nissi Caps</button>
+    <button onclick="mostrarCategoria('waycaps')">Waycaps</button>
+  </nav>
+
+  <div class="container">
+
+    <div id="placa" class="grid categoria" style="display: grid;">
+      <h2 class="section-title">Gorras de Placa</h2>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Gorra+Placa+1" alt="Gorra Placa 1">
+        <p>Gorra Placa Negra - $280 MXN</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Gorra+Placa+2" alt="Gorra Placa 2">
+        <p>Gorra Placa Metálica Roja - $300 MXN</p>
+      </div>
+    </div>
+
+    <div id="gamuza" class="grid categoria" style="display: none;">
+      <h2 class="section-title">Gorras de Gamuza</h2>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Gamuza+1" alt="Gamuza 1">
+        <p>Gorra Gamuza Café - $320 MXN</p>
+      </div>
+    </div>
+
+    <div id="nissi" class="grid categoria" style="display: none;">
+      <h2 class="section-title">Nissi Caps</h2>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Nissi+1" alt="Nissi 1">
+        <p>Nissi Cap Azul - $260 MXN</p>
+      </div>
+    </div>
+
+    <div id="waycaps" class="grid categoria" style="display: none;">
+      <h2 class="section-title">Waycaps</h2>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Waycap+1" alt="Waycap 1">
+        <p>Waycap Militar Verde - $280 MXN</p>
+      </div>
+    </div>
+
+    <div class="contacto">
+      <h2 class="section-title">¿Quieres comprar o pedir personalizado?</h2>
+      <a href="https://www.instagram.com/exottic.shop" target="_blank">📱 WhatsApp</a>
+      <a href="https://instagram.com/exottic.shop" target="_blank">📸 Instagram</a>
+      <a href="mailto:ventas@exotticshop.com">📧 Email</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 EXOTTIC SHOP. Marca registrada. Hecho con pasión en México 🇲🇽</p>
+  </footer>
+
+</body>
+</html>
